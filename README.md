@@ -1,2 +1,2 @@
-# blog_eletronica
-Criação de um blog de eletrônica
+# Criação de um ecommerce
+Ecommerce usando react
