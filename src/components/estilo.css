@@ -1,0 +1,504 @@
+.cabecalho {
+  background: #000;
+  color: #fff;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.cabecalho-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cabecalho-botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.cabecalho-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Login */
+.login-popup-box {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px #0002;
+  padding: 30px 40px;
+  z-index: 1001;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-popup-btn {
+  background: #3B82F6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-popup-btn:hover {
+  background: #2563eb;
+}
+
+
+
+/* Loja de produtos */
+.loja-produtos-container {
+    padding: 40px;
+  margin: auto;
+  max-width: 1400px;
+}
+
+.loja-titulo {
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.loja-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.loja-produto {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  justify-content: space-between;
+  padding: 0;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.loja-produto-img-area {
+  flex: 1;
+}
+
+.loja-produto-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.loja-produto-nome {
+    margin-top: 2px;
+    flex-wrap: wrap;
+  font-weight: bold;
+  color: #000;
+  font-size: 22px;
+  text-align: left;
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #eee;
+}
+
+.loja-produto-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #f5f5f5;
+  border-top: none;
+  width: 100%;
+}
+
+.loja-produto-preco {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.loja-produto-btn {
+  background: none;
+  border: none;
+  border-radius: 6px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rodapé da loja */
+.footer-loja {
+  background: #105cd5;
+  color: #fff;
+  padding: 30px 0 20px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 700px;
+  margin: 0 auto;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Carrinho lateral */
+.carrinho-lateral {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 30vw;
+  min-width: 320px;
+  max-width: 420px;
+  height: calc(100vh - 70px);
+  background: #fff;
+  box-shadow: -2px 0 16px #0003;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  animation: slideInCart .2s;
+}
+
+@keyframes slideInCart {
+  from { right: -40vw; opacity: 0; }
+  to { right: 0; opacity: 1; }
+}
+
+.carrinho-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px 10px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.carrinho-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
+
+.carrinho-fechar {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  margin-left: 10px;
+}
+
+.carrinho-itens {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px 0 24px;
+}
+
+.carrinho-vazio {
+  text-align: center;
+  color: #888;
+  margin-top: 40px;
+}
+
+.carrinho-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  gap: 14px;
+}
+
+.carrinho-item-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.carrinho-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.carrinho-item-nome {
+  font-weight: bold;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+.carrinho-item-preco {
+  color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.carrinho-item-qtd {
+  width: 60px;
+  height: 32px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.carrinho-item-remover {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.carrinho-linha {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 0 24px 12px 24px;
+}
+
+.carrinho-total-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 24px 24px;
+}
+
+.carrinho-total-txt {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.carrinho-total-preco {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.comprar-btn {
+  background: #e11d48;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.comprar-btn:hover {
+  background: #be123c;
+}
+
+/* Login central */
+
+.login-central-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3B82F6;
+}
+
+.login-central-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-central-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: start;
+  width: 100%;
+
+}
+.login-central-subtitle {
+   font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  text-align: start;
+  width: 100%;
+}
+
+.login-central-btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 7px !important;
+  width: 400px;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.login-central-divider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-ou {
+  margin: 0 12px;
+  color: #000
+}
+
+.hrlinha{
+  width: 45%;
+  display: block;
+  margin: auto;
+}
+
+.link{
+  text-decoration: none;
+}
+
+/* Cadastro usuario */
+
+.cadastro-central-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3B82F6;
+}
+
+.cadastro-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0002;
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 340px;
+}
+
+.cadastro-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 28px;
+  color: #222;
+  text-align: center;
+  width: 100%;
+}
+
+.cadastro-input {
+  width: 300px;
+  max-width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.cadastro-btn {
+  width: 300px;
+  max-width: 100%;
+  background: orange;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.cadastro-btn:hover {
+  background: #ff9800;
+}
+
+.cadastro-erro {
+  color: #d32f2f;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Nome do usuário no cabeçalho */
+.usuario-nome {
+  color: #fff;
+  font-weight: bold;
+  margin-left: 12px;
+  font-size: 1.1rem;
+}
+
+/* Mensagem de pedido feito */
+.pedido-feito-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(34,34,34,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.pedido-feito-msg {
+  background: #fff;
+  color: #222;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 40px 60px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0003;
+  text-align: center;
+}
